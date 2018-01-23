@@ -4,3 +4,29 @@ This is Lua 5.3.4, released on 12 Jan 2017.
 For installation instructions, license details, and
 further information about Lua, see doc/readme.html.
 
+build
+1.
+install readline-devel
+
+2.
+make linux
+
+3.
+vi Makefile
+INSTALL_TOP= /usr/local/
+alter
+INSTALL_TOP= /usr/local/lua
+
+4.
+make install
+
+5.
+PATH
+echo $PATH
+add PATH
+vi /etc/profile
+PATH=$PATH:/usr/local/lua:/usr/local/lua/bin:/usr/local/lua/lib:/usr/local/lua/include;
+export PATH
+
+6.
+make clean
